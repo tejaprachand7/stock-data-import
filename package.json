@@ -1,0 +1,17 @@
+{
+  "name": "stock-data-import-app",
+  "version": "1.0.0",
+  "description": "imports the stock data from the file system to SQL DB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "teja.prachand",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "csv-parser": "^3.2.0",
+    "dotenv": "^16.5.0",
+    "pg": "^8.16.0"
+  }
+}

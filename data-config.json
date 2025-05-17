@@ -1,0 +1,75 @@
+[
+  {
+    "type": "equities",
+    "years": ["2024", "2025"],
+    "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    "folders": [
+      {
+        "folderName": "CM_UDiFF_Common_Bhavcopy_Final",
+        "columns": [
+          "TradDt",
+          "TckrSymb",
+          "FinInstrmNm",
+          "OpnPric",
+          "HghPric",
+          "LwPric",
+          "ClsPric",
+          "LastPric",
+          "PrvsClsgPric",
+          "TtlTradgVol",
+          "TtlTrfVal"
+        ],
+        "columnLabelAndTypeMapping": {
+          "TradDt": ["date", "DATE"],
+          "TckrSymb": ["symbol", "TEXT"],
+          "FinInstrmNm": ["name", "TEXT"],
+          "OpnPric": ["open_price", "FLOAT"],
+          "HghPric": ["high_price", "FLOAT"],
+          "LwPric": ["low_price", "FLOAT"],
+          "ClsPric": ["close_price", "FLOAT"],
+          "LastPric": ["last_price", "FLOAT"],
+          "PrvsClsgPric": ["prev_close_price", "FLOAT"],
+          "TtlTradgVol": ["total_trading_vol", "INT"],
+          "TtlTrfVal": ["total_transfer_val", "INT"]
+        },
+        "filter": [{ "field": "SctySrs", "operation": "EQUALS", "value": "EQ" }],
+        "uniqueColumn": "TckrSymb",
+        "isMain": true,
+        "dateIndexInFileName": 6,
+        "fileNameSeparator": "_",
+        "dateFormatInFileName": "YYYYMMDD"
+      },
+      {
+        "folderName": "Full_Bhavcopy_and_Security_Deliverable_data",
+        "columns": [" AVG_PRICE", " TTL_TRD_QNTY", " NO_OF_TRADES", " DELIV_QTY", " DELIV_PER"],
+        "columnLabelAndTypeMapping": {
+          " AVG_PRICE": ["avg_price", "FLOAT"],
+          " TTL_TRD_QNTY": ["total_traded_qty", "INT"],
+          " NO_OF_TRADES": ["no_of_trades", "INT"],
+          " DELIV_QTY": ["deliverable_qty", "INT"],
+          " DELIV_PER": ["deliverable_percentage", "FLOAT"]
+        },
+        "filter": [{ "field": " SERIES", "operation": "EQUALS", "value": "EQ" }],
+        "uniqueColumn": "SYMBOL",
+        "isMain": false,
+        "dateIndexInFileName": 3,
+        "fileNameSeparator": "_",
+        "dateFormatInFileName": "DDMMYYYY"
+      }
+    ],
+    "basePath": "F:\\stocks-data\\equities-and-sme",
+    "active": true,
+    "tableName": "equities_and_sme.market_data",
+    "logFilePath": ""
+  },
+  {
+    "type": "derivatives",
+    "years": [],
+    "months": [],
+    "folders": [],
+    "basePath": "F:\\stocks-data\\derivatives",
+    "active": false,
+    "tableName": "",
+    "logFilePath": ""
+  }
+]
